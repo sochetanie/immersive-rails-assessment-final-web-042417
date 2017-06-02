@@ -1,4 +1,8 @@
 <h1><%= @guest.name %></h1>
-
 <h3><%= @guest.occupation %></h3>
-
+<% @guest.appearances.each do |a| %>
+    Episode Appearance: <%=  link_to a.episode.date, a.episode %>
+    Episode Rating: <%=  a.rating %>
+    Guest Booked By: <%= a.user.username %>
+    <%= link_to "Edit Appearance", edit_appearance_path(a) %>
+    <% end %>

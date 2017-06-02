@@ -1,0 +1,8 @@
+<li>Episode date: <%= @appearance.episode.date %></li>
+<li>Episode #: <%= @appearance.episode.number %></li>
+<li>Guest name: <%= @appearance.guest.name %></li>
+<li>Guest occupation: <%= @appearance.guest.occupation %></li>
+<li>Appearance rating: <%= @appearance.rating %></li>
+<li>Producer: <%= User.all.first.username %></li>
+
+<%= link_to "Edit Appearance", edit_appearance_path %>
